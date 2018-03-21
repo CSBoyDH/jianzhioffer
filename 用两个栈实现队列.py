@@ -14,3 +14,12 @@ class Solution:
     def pop(self):
         self.peek()
         return self.outStack.pop()
+    def peek(self):
+        if not self.outStack:
+            while self.inStack:
+                self.outStack.append(self.inStack.pop())
+        return self.outStack[-1]
+
+    # @return an boolean
+    def empty(self):
+        return len(self.inStack) + len(self.outStack) == 0

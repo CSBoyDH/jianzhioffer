@@ -11,12 +11,12 @@ class Solution:
          #   return 0;
         #else:
         if exponent==0:
-            return 1;
+            return 1
         exp=abs(exponent)
         ans=1.0
         for i in range(0,exp):
             ans=ans*base
         if exponent>0:
-            return ans;
+            return ans
         else :
             return 1/ans

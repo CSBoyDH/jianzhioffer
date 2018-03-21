@@ -6,6 +6,9 @@
 # 13 14 15 16
 # 则依次打印出数字
 # 1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.
+from numpy.core.tests.test_mem_overlap import xrange
+
+
 class Solution:
     # matrix类型为二维列表，需要返回列表
     def printMatrix(self, matrix):

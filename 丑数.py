@@ -20,3 +20,18 @@ class Solution:
         return uglyList[-1]
 a = Solution()
 print(a.GetUglyNumber_Solution(10))
+class Solution(object):
+    def isUgly(self, num):
+        """
+        :type num: int
+        :rtype: bool
+        """
+        if num <= 0:
+            return False
+        while num % 2 == 0:
+            num = num /2
+        while num %3 == 0:
+            num = num / 3
+        while num % 5 == 0:
+            num = num /5
+        return num ==1
