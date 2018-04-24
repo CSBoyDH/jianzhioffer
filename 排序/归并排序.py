@@ -21,7 +21,10 @@ def merge(left, right):#类比两有序链表合并
 def merge_sort(numList):
     if len(numList)<=1:
         return numList
-    middle = len(numList)/2
+    middle = len(numList)//2
     left = merge_sort(numList[:middle])
     right = merge_sort(numList[middle:])
     return merge(left,right)
+myList = [49,38,65,97,76,13,27,49]
+
+print(merge_sort(myList))
