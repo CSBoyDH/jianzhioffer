@@ -10,10 +10,10 @@ class Solution:
             return []
         begin = 1
         end = 2
-        middle = (tsum+1)/2#由于至少两个数，起始数不可能大于一半
+        middle = (tsum)//2#由于至少两个数，起始数不可能大于一半
         curSum = begin+end
         output = []
-        while begin <middle:
+        while begin <=middle: #11/2 = 5.5 ，5+6 = 11 ，所以<=
             if curSum==tsum:
                 output.append(range(begin,end+1))
                 end+=1  #从小到大遍历，所以窗口向右扩展
